@@ -1,0 +1,26 @@
+// Jadiel Zuñiga Rodriguez
+// zujadiel@gmail.com
+// GNU/GPL
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main (int argn, char **args) {
+  
+  Integrator integrator;
+  Model model3body;
+  Particle particle1, particle2, particle3;
+
+  particle1 = new_Particle(mass, x, y, z, vx, vy, vz);
+  particle2 = new_Particle(mass, x, y, z, vx, vy, vz);
+  particle3 = new_Particle(mass, x, y, z, vx, vy, vz);
+  
+  model3body = new_Model(name, N);
+  
+  add_Particle_to_Model(&model3body, particle1);
+  add_Particle_to_Model(&model3body, particle2);
+  add_Particle_to_Model(&model3body, particle3);
+  
+  
+  return 0;
+}
